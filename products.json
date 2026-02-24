@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Муссовый торт",
-      "description": "Бисквит 20% | Воздушный мусс 80%",
+      "description": "Бисквит 200% | Воздушный мусс 80%",
       "price": 450,
       "image": "images/tort.jpg",
       "category": "торты",
@@ -73,4 +73,5 @@
       "available": true
     }
   ]
+
 }
