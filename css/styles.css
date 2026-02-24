@@ -10,6 +10,7 @@ body {
   color: #ffffff;
   min-height: 100vh;
 }
+
 .top-info-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1915,6 +1916,7 @@ body {
   font-weight: bold;
 }
 .cart-item-controls {
+  color:#432719;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
