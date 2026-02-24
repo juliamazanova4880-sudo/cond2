@@ -3591,7 +3591,71 @@ html, body {
     background: #ffafbc;
     border-radius: 2px;
   }
+/* Адаптация для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .simple-slider .slide {
+    padding: 40px !important;
+  }
+  
+  .simple-slider .slide-image img {
+    max-width: 300px !important;
+  }
+  
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 
+/* Фикс для очень больших изображений */
+.slide-image img,
+.dessert-image img,
+.morning-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Улучшение для мобильного меню */
+@media (max-width: 768px) {
+  .main-nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 80px);
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .main-nav.active {
+    left: 0;
+  }
+  
+  .nav-item {
+    width: 100%;
+    margin: 0 !important;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown-menu {
+    position: static !important;
+    display: none;
+    box-shadow: none !important;
+    padding: 0 20px !important;
+  }
+  
+  .nav-item.active .dropdown-menu {
+    display: block !important;
+  }
+}
   ::-webkit-scrollbar-thumb:hover {
     background: #e58b9a;
   }
