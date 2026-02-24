@@ -1385,6 +1385,34 @@ initCatalogButtons() {
   });
 }
 
+alignCardsHeight() {
+
+  setTimeout(() => {
+    if (window.$) {
+      let maxHeight = 0;
+      $('.catalog-grid .card').each(function() {
+        $(this).css('height', 'auto');
+        let h = $(this).outerHeight();
+        if (h > maxHeight) maxHeight = h;
+      });
+      $('.catalog-grid .card').css('height', maxHeight + 'px');
+    } else {
+      const cards = document.querySelectorAll('.catalog-grid .card');
+      let maxHeight = 0;
+      
+      cards.forEach(card => {
+        card.style.height = 'auto';
+        let h = card.offsetHeight;
+        if (h > maxHeight) maxHeight = h;
+      });
+      
+      cards.forEach(card => {
+        card.style.height = maxHeight + 'px';
+      });
+    }
+  }, 100);
+}
+
   initCartButtons() {
     // Открытие корзины
     document.querySelector('.cart-icon')?.addEventListener('click', (e) => {
@@ -1990,4 +2018,5 @@ document.addEventListener('DOMContentLoaded', () => {
   
   console.log('🚀 Единая система инициализирована!');
 });
+
 
