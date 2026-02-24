@@ -198,7 +198,11 @@ renderCatalog() {
   } else {
     // Если только базовые товары - используем AJAX (быстрее)
     console.log('🌐 Используем AJAX-загрузку (базовый каталог)');
-    fetch('partials/base-cards.html')
+    
+    // Добавляем timestamp для обхода кэша GitHub
+    const cacheBuster = `?v=${Date.now()}`;
+    
+    fetch(`partials/base-cards.html${cacheBuster}`)
       .then(response => {
         if (!response.ok) throw new Error('Файл не найден');
         return response.text();
@@ -207,7 +211,36 @@ renderCatalog() {
         container.innerHTML = html;
         if (loading) loading.style.display = 'none';
         this.initCatalogButtons(); // Активируем кнопки
-        setTimeout(() => this.alignCardsHeight(), 100);
+        
+        // ✅ ИСПРАВЛЕНО: выравнивание карточек без вызова несуществующей функции
+        setTimeout(() => {
+          if (window.$) {
+            // Используем jQuery если доступен
+            let maxHeight = 0;
+            $('.catalog-grid .card').each(function() {
+              $(this).css('height', 'auto');
+              let h = $(this).outerHeight();
+              if (h > maxHeight) maxHeight = h;
+            });
+            $('.catalog-grid .card').css('height', maxHeight + 'px');
+            console.log('✅ Карточки выровнены через jQuery');
+          } else {
+            // Если jQuery нет - используем чистый JS
+            const cards = document.querySelectorAll('.catalog-grid .card');
+            let maxHeight = 0;
+            
+            cards.forEach(card => {
+              card.style.height = 'auto';
+              let h = card.offsetHeight;
+              if (h > maxHeight) maxHeight = h;
+            });
+            
+            cards.forEach(card => {
+              card.style.height = maxHeight + 'px';
+            });
+            console.log('✅ Карточки выровнены через JS');
+          }
+        }, 100);
       })
       .catch(err => {
         console.error('AJAX ошибка:', err);
@@ -1957,3 +1990,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
   console.log('🚀 Единая система инициализирована!');
 });
+
