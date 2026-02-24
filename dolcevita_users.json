@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "full_name": "Администратор Dolce Vita",
+    "email": "admin@dolcevita.com",
+    "phone": "+7 (999) 999-99-99",
+    "password": "Admin123!",
+    "city": "Москва",
+    "role": "admin",
+    "newsletter": true,
+    "registration_date": "2024-01-01T00:00:00.000Z",
+    "is_active": true
+  },
+  {
+    "id": 1700000000000,
+    "full_name": "Иван Иванов",
+    "email": "ivan@example.com",
+    "phone": "+7 (900) 123-45-67",
+    "password": "password123",
+    "city": "Москва",
+    "role": "user",
+    "newsletter": true,
+    "registration_date": "2024-01-15T10:30:00.000Z",
+    "is_active": true
+  }
+]

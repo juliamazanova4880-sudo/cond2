@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Муссовый торт",
+      "description": "Бисквит 20% | Воздушный мусс 80%",
+      "price": 450,
+      "image": "images/tort.jpg",
+      "category": "торты",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Чизкейк",
+      "description": "Сырный крем 90% | Хрустящая основа 10%",
+      "price": 430,
+      "image": "images/cheesecake.jpg",
+      "category": "торты",
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Эклер",
+      "description": "Заварной крем 50% | Сладкое тесто 50%",
+      "price": 300,
+      "image": "images/eclair.jpg",
+      "category": "десерты",
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Тирамису",
+      "description": "Крем маскарпоне 80% | Кофейная пропитка 20%",
+      "price": 500,
+      "image": "images/tiramisu.jpg",
+      "category": "десерты",
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Макаруны",
+      "description": "Нежное миндальное печенье с кремовой начинкой",
+      "price": 280,
+      "image": "images/macarons.jpg",
+      "category": "десерты",
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "Красный бархат",
+      "description": "Шоколадный бисквит со сливочным кремом",
+      "price": 520,
+      "image": "images/red-velvet.jpg",
+      "category": "торты",
+      "available": true
+    },
+    {
+      "id": 7,
+      "name": "Медовик",
+      "description": "Медовые коржи со сметанным кремом",
+      "price": 480,
+      "image": "images/medovik.jpg",
+      "category": "торты",
+      "available": true
+    },
+    {
+      "id": 8,
+      "name": "Панна Котта",
+      "description": "Итальянский десерт с ягодным соусом",
+      "price": 320,
+      "image": "images/panna-cotta.jpg",
+      "category": "десерты",
+      "available": true
+    }
+  ]
+}

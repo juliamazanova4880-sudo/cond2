@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Подключаем Vue.js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dolce Vita</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- СВЕТЛАЯ ВЕРХНЯЯ ПАНЕЛЬ -->
+  <div class="top-info-bar">
+    <div>Города: Москва, Санкт-Петербург, Рязань</div>
+    <div>Работаем: 9:00–21:00</div>
+    <div>Доставляем за 2 часа</div>
+    <div>Телефон: <a href="tel:+79009009090">+7 (900) 900-90-90</a></div>
+    <div>Email: <a href="mailto:dolcevita@confectionery.com">dolcevita@confectionery.com</a></div>
+  </div>
+
+<!-- ШАПКА -->
+<div class="app-layout-header">
+  <header class="header">
+    <div class="logo">Dolce Vita</div>
+    
+    <nav class="main-nav">
+      <!-- Каталог -->
+      <div class="nav-item dropdown">
+        <a href="#catalog" class="nav-link">
+          Каталог
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="menu-header">
+            <h3>🍰 Каталог десертов</h3>
+            <p>Выберите категорию или воспользуйтесь поиском</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-column">
+              <h4>Торты</h4>
+              <a href="#cakes">Муссовые торты</a>
+              <a href="#cheesecakes">Чизкейки</a>
+              <a href="#sponge">Бисквитные торты</a>
+              <a href="#wedding">Свадебные торты</a>
+            </div>
+            <div class="menu-column">
+              <h4>Десерты</h4>
+              <a href="#eclairs">Эклеры</a>
+              <a href="#macarons">Макаруны</a>
+              <a href="#tiramisu">Тирамису</a>
+              <a href="#pavlova">Павлова</a>
+            </div>
+            <div class="menu-column">
+              <h4>Специальное</h4>
+              <a href="#gifts">Подарочные наборы</a>
+              <a href="#seasonal">Сезонные предложения</a>
+              <a href="#vegan">Веганские десерты</a>
+              <a href="#sugarfree">Без сахара</a>
+            </div>
+          </div>
+          <div class="menu-footer">
+            <a href="#all" class="view-all">Смотреть весь каталог →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- О нас -->
+      <div class="nav-item dropdown">
+        <a href="#about" class="nav-link">
+          О нас
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="menu-header">
+            <h3>🏆 О кондитерской Dolce Vita</h3>
+            <p>Узнайте больше о нашей философии и команде</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-column">
+              <h4>О компании</h4>
+              <a href="#history">📖 История бренда</a>
+              <a href="#philosophy">💭 Наша философия</a>
+              <a href="#mission">🎯 Миссия и ценности</a>
+            </div>
+            <div class="menu-column">
+              <h4>Команда</h4>
+              <a href="#chefs">👨‍🍳 Наши кондитеры</a>
+              <a href="#team">👥 Вся команда</a>
+              <a href="#vacancies">💼 Вакансии</a>
+            </div>
+            <div class="menu-column">
+              <h4>Достижения</h4>
+              <a href="#certificates">📜 Сертификаты</a>
+              <a href="#awards">🏅 Награды</a>
+              <a href="#reviews">⭐ Отзывы</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Доставка -->
+      <div class="nav-item dropdown">
+        <a href="#delivery" class="nav-link">
+          Доставка
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="menu-header">
+            <h3>🚚 Доставка и оплата</h3>
+            <p>Быстрая доставка по всем городам</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-column">
+              <h4>Способы доставки</h4>
+              <a href="#courier">📦 Курьерская доставка</a>
+              <a href="#pickup">🏪 Самовывоз</a>
+              <a href="#express">⚡ Экспресс 2 часа</a>
+            </div>
+            <div class="menu-column">
+              <h4>Оплата</h4>
+              <a href="#cash">💵 Наличными</a>
+              <a href="#card">💳 Картой онлайн</a>
+              <a href="#receipt">🧾 По счету</a>
+            </div>
+            <div class="menu-column">
+              <h4>Условия</h4>
+              <a href="#price">💰 Стоимость</a>
+              <a href="#free">🎁 Бесплатная доставка</a>
+              <a href="#schedule">⏰ График работы</a>
+            </div>
+          </div>
+          <div class="menu-footer">
+            <div class="delivery-info">
+              <span class="info-badge">🚀</span>
+              <span>Доставляем за 2 часа</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div class="nav-item dropdown">
+        <a href="#contacts" class="nav-link">
+          Контакты
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="menu-header">
+            <h3>📞 Контакты</h3>
+            <p>Свяжитесь с нами удобным способом</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-column">
+              <h4>Магазины</h4>
+              <a href="#moscow">📍 Москва</a>
+              <a href="#petersburg">📍 Санкт-Петербург</a>
+              <a href="#ryazan">📍 Рязань</a>
+            </div>
+            <div class="menu-column">
+              <h4>Связь</h4>
+              <a href="tel:+79009009090">📞 +7 (900) 900-90-90</a>
+              <a href="mailto:dolcevita@confectionery.com">✉️ dolcevita@confectionery.com</a>
+              <a href="#callback">📲 Заказать звонок</a>
+            </div>
+            <div class="menu-column">
+              <h4>Соцсети</h4>
+              <a href="#instagram">📷 Instagram</a>
+              <a href="#vk">📘 ВКонтакте</a>
+              <a href="#telegram">💬 Telegram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Акции -->
+      <div class="nav-item dropdown">
+        <a href="#promotions" class="nav-link">
+          Акции
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="menu-header">
+            <h3>🔥 Акции и скидки</h3>
+            <p>Выгодные предложения этой недели</p>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-column">
+              <h4>Скидки</h4>
+              <a href="#first-order"><span class="promo-badge">-30%</span> На первый заказ</a>
+              <a href="#free-delivery"><span class="promo-badge">Бесплатно</span> Доставка от 2000₽</a>
+              <a href="#birthday"><span class="promo-badge">Подарок</span> В день рождения</a>
+            </div>
+            <div class="menu-column">
+              <h4>Акции</h4>
+              <a href="#two-for-one"><span class="promo-badge">2=1</span> Второй десерт в подарок</a>
+              <a href="#gift-wrap"><span class="promo-badge">🎁</span> Подарочная упаковка</a>
+              <a href="#weekend"><span class="promo-badge">🎉</span> Выходной промокод</a>
+            </div>
+            <div class="menu-column">
+              <h4>Новинки</h4>
+              <a href="#new-collection"><span class="promo-badge">NEW</span> Зимняя коллекция</a>
+              <a href="#cheesecake"><span class="promo-badge">🍰</span> Чизкейк «Снежная сказка»</a>
+              <a href="#limited"><span class="promo-badge">⏳</span> Ограниченная серия</a>
+            </div>
+          </div>
+          <div class="menu-footer">
+            <a href="#all-promo" class="view-all">Все акции и скидки →</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<div class="auth-buttons">
+  <a href="#" class="cart-icon" title="Корзина">🛒<span class="cart-counter">0</span></a>
+  
+  <!-- Если пользователь не авторизован -->
+  <a href="#" class="auth-btn underline" id="register-btn">Регистрация</a>
+  <a href="#" class="auth-btn filled" id="login-btn">Войти</a>
+  
+  <!-- Если пользователь авторизован (скрипт добавит) -->
+  <div class="user-menu" style="display: none;">
+    <button class="user-btn">
+      <span class="user-avatar"></span>
+      <span class="user-name"></span>
+      <span class="dropdown-arrow">▼</span>
+    </button>
+    <div class="user-dropdown">
+      <a href="#profile" class="dropdown-link">👤 Профиль</a>
+      <a href="#orders" class="dropdown-link">📦 Заказы</a>
+      <a href="#" class="dropdown-link admin-link" id="admin-catalog" style="display: none;">
+        📝 Редактировать каталог
+      </a>
+      <a href="#" class="dropdown-link admin-link" id="admin-users" style="display: none;">
+        👥 Список пользователей
+      </a>
+      <a href="#" class="dropdown-link logout-link" id="logout-btn">🚪 Выйти</a>
+    </div>
+  </div>
+</div>
+  </header>
+</div>
+  <!-- МОДАЛЬНОЕ ОКНО РЕГИСТРАЦИИ -->
+  <div class="modal-overlay" id="register-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2>Регистрация</h2>
+        <button class="close-modal" id="close-modal">&times;</button>
+      </div>
+      <form id="registration-form" class="registration-form">
+        <div class="form-group">
+          <label for="full-name">Полное имя *</label>
+          <input type="text" id="full-name" name="full_name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Телефон *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Пароль *</label>
+          <input type="password" id="password" name="password" required minlength="6">
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password">Подтвердите пароль *</label>
+          <input type="password" id="confirm-password" name="confirm_password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="city">Город</label>
+          <select id="city" name="city">
+            <option value="">Выберите город</option>
+            <option value="Москва">Москва</option>
+            <option value="Санкт-Петербург">Санкт-Петербург</option>
+            <option value="Рязань">Рязань</option>
+            <option value="Другой">Другой</option>
+          </select>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+          <label for="newsletter">Подписаться на новости и акции</label>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">Я согласен(а) с <a href="#">Условиями использования</a> и <a href="#">Политикой конфиденциальности</a> *</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+  <!-- УВЕДОМЛЕНИЕ ОБ УСПЕШНОЙ РЕГИСТРАЦИИ -->
+  <div class="notification" id="success-notification">
+    <div class="notification-content">
+      <span class="notification-icon">✓</span>
+      <div class="notification-text">
+        <h3>Регистрация успешна!</h3>
+        <p>Добро пожаловать в Dolce Vita! Теперь вы можете совершать покупки и получать специальные предложения.</p>
+      </div>
+      <button class="close-notification" id="close-notification">&times;</button>
+    </div>
+  </div>
+
+
+<!-- МОДАЛЬНОЕ ОКНО ВХОДА -->
+<div class="modal-overlay" id="login-modal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h2>Вход</h2>
+      <button class="close-modal" id="close-login-modal">&times;</button>
+    </div>
+    <form id="login-form" class="registration-form">
+      <div class="form-group">
+        <label for="login-email">Email *</label>
+        <input type="email" id="login-email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="login-password">Пароль *</label>
+        <input type="password" id="login-password" name="password" required>
+      </div>
+      
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="remember-me" name="remember">
+        <label for="remember-me">Запомнить меня</label>
+      </div>
+      
+      <div class="form-group" style="text-align: center; margin: 15px 0;">
+        <a href="#" id="forgot-password" style="color: #ffafbc; text-decoration: none;">Забыли пароль?</a>
+      </div>
+      
+      <button type="submit" class="submit-btn">Войти</button>
+      
+      <div class="form-group" style="text-align: center; margin-top: 20px;">
+        <span style="color: #666;">Нет аккаунта? </span>
+        <a href="#" id="go-to-register" style="color: #ffafbc; text-decoration: none; font-weight: bold;">Зарегистрироваться</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- УВЕДОМЛЕНИЕ ОБ УСПЕШНОМ ВХОДЕ -->
+<div class="notification" id="login-success-notification">
+  <div class="notification-content">
+    <span class="notification-icon">✓</span>
+    <div class="notification-text">
+      <h3>Вход выполнен!</h3>
+      <p>Добро пожаловать обратно в Dolce Vita!</p>
+    </div>
+    <button class="close-notification" id="close-login-notification">&times;</button>
+  </div>
+</div>
+ 
+<!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
+<div class="modal-overlay" id="cart-modal">
+  <div class="modal-container cart-modal-container">
+    <div class="modal-header">
+      <h2>Корзина</h2>
+      <button class="close-modal" id="close-cart-modal">&times;</button>
+    </div>
+    <div class="cart-content">
+      <!-- Список товаров -->
+      <div id="cart-items-list"></div>
+      
+      <!-- Итоговая сумма -->
+      <div class="cart-total" id="cart-total">
+        Итого: <span id="total-price">0</span>₽
+      </div>
+      
+      <!-- Кнопки -->
+      <div class="cart-buttons">
+        <button class="clear-cart-btn" id="clear-cart-btn">Очистить корзину</button>
+        <button class="checkout-btn" id="checkout-btn">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main class="main">
+  <div class="simple-slider">
+    <div class="slide active">
+      <div class="slide-content">
+        <h2>Зимняя коллекция!</h2>
+        <h3>Чизкейк «Снежная сказка»</h3>
+        <p>Нежный сливочный чизкейк с кисло-сладкой начинкой из мандарина</p>
+        <div class="slide-info">
+          <span>450₽</span>
+          <span>В наличии</span>
+          <span>Только до 15 января</span>
+        </div>
+       <a href="#" class="slide-btn" id="winter-cheesecake-btn" data-add-to-cart="winter-cheesecake">Заказать сейчас</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/winter.png" alt="Чизкейк">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>Специальное предложение</h2>
+        <h3>Бесплатная доставка</h3>
+        <p>Закажите на сумму от 2000₽ — и мы доставим вашу выпечку бесплатно</p>
+        <div class="slide-info">
+          <span>Акция до 31 декабря</span>
+          <span>Все города</span>
+          <span>-30% на первый заказ</span>
+        </div>
+        <a href="#catalog" class="slide-btn">Выбрать десерты</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/dessert.jpg" alt="Доставка">
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>Подарите сладкое настроение</h2>
+        <h3>Праздничный набор</h3>
+        <p>6 мини-десертов в элегантной упаковке — идеальный подарок</p>
+        <div class="slide-info">
+          <span>990₽</span>
+          <span>С открыткой</span>
+          <span>Доступен онлайн</span>
+        </div>
+        <a href="#" class="slide-btn" id="gift-set-btn">Собрать набор</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/nabor.jpg" alt="Набор">
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Блок с десертом и фоновой картинкой шоколада -->
+  <section class="dessert-section">
+    <div class="chocolate-bg">
+      <img src="images/choc.png" alt="Шоколадная струя">
+    </div>
+    <div class="dessert-content">
+      <h2 class="dessert-title">Откройте для себя<br>лучший десерт</h2>
+      <p class="dessert-text">
+        Dolce Vita — место, где создают сладкие моменты. Наши десерты заряжают радостью и возвращают вкус к жизни.
+        Можно просто съесть десерт. А можно пережить настоящее наслаждение. Позвольте себе тот самый десерт, который станет вашим новым эталоном вкуса.
+      </p>
+      <a href="#" class="dessert-btn">Узнать больше</a>
+    </div>
+    <div class="dessert-image">
+      <img src="images/keks.png" alt="Кекс">
+    </div>
+  </section>
+
+<!-- КАТАЛОГ ДЕСЕРТОВ -->
+<section class="catalog-section" id="catalog">
+  <div class="catalog-header">
+    <h2 class="catalog-title">Насладитесь новым взглядом на десерты</h2>
+    <p class="catalog-subtitle">Исследуйте всю палитру вкусов вместе с нами. Для вас всегда найдется новый десерт, который стоит попробовать.</p>
+  </div>
+  
+  <!-- Контейнер для загрузки товаров -->
+  <div class="catalog-loading">
+    <div class="loading-spinner"></div>
+    <p>Загружаем вкусные десерты...</p>
+  </div>
+  
+  <div class="catalog-grid" id="catalog-grid">
+    <!-- Товары будут загружены через AJAX -->
+  </div>
+  
+  <!-- Фильтры каталога (опционально) -->
+  <div class="catalog-filters">
+    <button class="filter-btn active" data-filter="all">Все товары</button>
+    <button class="filter-btn" data-filter="торты">Торты</button>
+    <button class="filter-btn" data-filter="десерты">Десерты</button>
+    <button class="filter-btn" data-filter="пирожные">Пирожные</button>
+  </div>
+</section>
+  <!-- РАЗДЕЛ "ПОЧЕМУ МЫ ТАКИЕ ОСОБЕННЫЕ?" -->
+<section class="features-section" id="about">
+    <div class="features-content">
+      <div class="features-header">
+        <h2 class="features-title">Почему мы такие особенные?</h2>
+        <p class="features-subtitle">Мы не просто делаем для вас десерты, мы создаем ваш день!</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/hand.png" alt="Ручная работа">
+          </div>
+          <h3>Ручная Работа</h3>
+          <p>Каждый десерт создаётся вручную с особым вниманием</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/qual.png" alt="Качество">
+          </div>
+          <h3>Высокое Качество</h3>
+          <p>Мы гарантируем качество в каждой детали</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/receip.png" alt="Рецепты">
+          </div>
+          <h3>Авторские Рецепты</h3>
+          <p>Уникальные сочетания, созданные нашим кондитером</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/money.jpg" alt="Цены">
+          </div>
+          <h3>Доступные Цены</h3>
+          <p>Наслаждаться изысканным может каждый</p>
+        </div>
+      </div>
+      <div class="features-footer">
+        <p>Отличные идеи начинаются с отличных десертов, позвольте нам помочь вам в этом</p>
+        <h3 class="features-call">Начните прямо сегодня</h3>
+        <a href="#" class="join-btn">Присоединиться</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="morning-section">
+    <div class="morning-content">
+      <h2 class="morning-title">Получите шанс иметь<br>Удивительное утро</h2>
+      <p class="morning-text">
+        Мы даём вам единственную возможность улучшить свою жизнь с помощью сладостей.
+      </p>
+      <a href="#" class="morning-btn">Заказать</a>
+    </div>
+    <div class="morning-image">
+      <img src="images/chis.png" alt="Чизкейк с клубникой">
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <h1>Отзывы о нашей кондитерской</h1>
+      <p class="subtitle">Наши клиенты могут рассказать о нас удивительные вещи</p>
+      <div class="slider-progress">
+        <div class="progress-bar"></div>
+        <div class="progress-bar"></div>
+        <div class="progress-bar"></div>
+      </div>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <div class="review-card">
+              <div class="review-content">
+                <h2>Восхитительная кондитерская «Dolce Vita» — настоящий оазис для сладкоежек!</h2>
+                <div class="review-text">
+                  <p>Заказывал торт на день рождения — оформление было просто сказочным, а вкус?</p>
+                  <p>Невероятно нежный, не перегруженный, с идеальным балансом. Каждый кусочек — как маленькое произведение искусства. Обслуживание на высшем уровне: быстро, вежливо, с вниманием к деталям. Спасибо за то, что сделали мой праздник ещё ярче.</p>
+                  <p>Обязательно вернусь — и с друзьями</p>
+                </div>
+                <div class="review-author">Иван Иванов</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="review-card">
+              <div class="review-content">
+                <h2>Отличное качество и сервис!</h2>
+                <div class="review-text">
+                  <p>Прекрасная кондитерская с внимательным персоналом и восхитительными десертами.</p>
+                  <p>Всегда свежая выпечка и приятная атмосфера. Рекомендую всем любителям качественных сладостей!</p>
+                  <p>Особенно понравились макаруны и тирамису</p>
+                </div>
+                <div class="review-author">Мария Петрова</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="review-card">
+              <div class="review-content">
+                <h2>Лучшие пирожные в городе!</h2>
+                <div class="review-text">
+                  <p>Нигде больше не пробовала таких нежных и вкусных десертов.</p>
+                  <p>Особенно рекомендую тирамису и эклеры. Персонал очень вежливый и профессиональный.</p>
+                  <p>Теперь это моя любимая кондитерская!</p>
+                </div>
+                <div class="review-author">Анна Сидорова</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customers-nav">
+        <div class="customer-item">
+          <div class="customer-avatar">
+            <img src="images/ivan.jpg" alt="Иван Иванов">
+          </div>
+          <span class="customer-name">Иван Иванов</span>
+        </div>
+        <div class="customer-item">
+          <div class="customer-avatar">
+            <img src="images/maria.jpg" alt="Мария Петрова">
+          </div>
+          <span class="customer-name">Мария Петрова</span>
+        </div>
+        <div class="customer-item">
+          <div class="customer-avatar">
+            <img src="images/ann.jpg" alt="Анна Сидорова">
+          </div>
+          <span class="customer-name">Анна Сидорова</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ПОДПИСКА -->
+  <section class="subscribe-section">
+    <div class="container">
+      <h2>Подпишитесь, чтобы получать новости</h2>
+      <p class="subtitle">Не пропустите наши последние новости, обновления, советы и специальные предложения</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your mail" required>
+        <button type="submit" class="subscribe-btn">Подписаться</button>
+      </form>
+    </div>
+    <div class="subscribe-cake">
+      <img src="images/cupcake.png" alt="Кекс с клубникой">
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer-section" id="contacts">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">Dolce Vita</h3>
+          <p class="footer-text">
+            Здесь каждый десерт — маленькое чудо.<br>
+            Мы создаём не просто выпечку, а моменты радости: для утреннего настроения, вечернего уюта или особого праздника.<br>
+            Наша страсть — натуральные ингредиенты, ручная работа и любовь к деталям.<br>
+            Приходите — попробуйте, как вкусно может быть жить.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>О нас</h4>
+          <ul>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">Функции</a></li>
+            <li><a href="#">Новости и блоги</a></li>
+            <li><a href="#">Помощь и поддержка</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="#">Как мы работаем</a></li>
+            <li><a href="#">Условия обслуживания</a></li>
+            <li><a href="#">Цена</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Связаться с нами</h4>
+          <ul>
+            <li>Тел: <a href="tel:+79009009090">+79009009090</a></li>
+            <li>Email: <a href="mailto:beanscene@mail.com">dolcevita@confectionery.com</a></li>
+            <li>Сайт: <a href="https://www.beanscene.com">www.dolcevit.com.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Кнопка "Наверх" -->
+<button id="back-to-top" class="back-to-top" aria-label="Наверх">
+  ↑
+</button>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Подключаем единую систему -->
+<script src="js/unified-system.js"></script>
+
+
+<script src="js/jquery-animations.js"></script>
+<script src="js/sliders.js"></script>
+</script>
+
+<div id="vue-toasts"></div>
+  
+</body>
+
+
+</html>
