@@ -1,4 +1,4 @@
-// unified-system.js - ЕДИНАЯ СИСТЕМА ВСЕХ ФУНКЦИЙ (ИСПРАВЛЕННАЯ)
+
 // Объединяет: каталог, авторизация, корзина, админ-панель
 
 // ========== ГЛОБАЛЬНЫЕ НАСТРОЙКИ ==========
@@ -1654,7 +1654,111 @@ alignCardsHeight() {
         z-index: 10000;
         pointer-events: none;
       }
-      
+      /* ===== АДАПТИВНЫЙ СЛАЙДЕР ===== */
+@media (max-width: 768px) {
+  .simple-slider {
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .simple-slider .slide {
+    display: none !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .simple-slider .slide.active {
+    display: flex !important;
+  }
+  
+  .simple-slider .slide-content {
+    width: 100% !important;
+    padding: 20px 0 !important;
+    text-align: center !important;
+  }
+  
+  .simple-slider .slide-image {
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+  
+  .simple-slider .slide-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    object-fit: contain !important;
+  }
+  
+  /* Фикс для фоновых изображений */
+  .chocolate-bg img,
+  .dessert-image img,
+  .morning-image img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  .chocolate-bg {
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  .chocolate-bg img {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Секции с десертами */
+  .dessert-section,
+  .morning-section {
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+  
+  .dessert-content,
+  .morning-content {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 20px 0 !important;
+  }
+  
+  .dessert-image,
+  .morning-image {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .dessert-image img,
+  .morning-image img {
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .simple-slider .slide-content h2 {
+    font-size: 20px !important;
+  }
+  
+  .simple-slider .slide-content h3 {
+    font-size: 18px !important;
+  }
+  
+  .simple-slider .slide-info {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .dessert-image img,
+  .morning-image img {
+    max-width: 100% !important;
+  }
+}
       /* Стили для админ-панели */
 .admin-modal {
   display: none;
@@ -2018,5 +2122,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   console.log('🚀 Единая система инициализирована!');
 });
+
 
 
